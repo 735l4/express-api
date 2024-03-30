@@ -3,6 +3,7 @@ import ExpressConfig from "./server/express.config";
 import routeConfig from "./server/route.config";
 import middlewareConfig from "./server/middleware.config";
 import { configDotenv } from "dotenv";
+import { startServer } from "./server/server.config";
 
 const app: Express = ExpressConfig();
 
@@ -10,8 +11,4 @@ middlewareConfig(app);
 routeConfig(app)
 configDotenv();
 
-const port = 3000;
-
-app.listen(port, () => {
-  console.log(`[server] Server is running on http://localhost:${port}`);
-})
+startServer(app);
