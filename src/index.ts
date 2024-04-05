@@ -1,4 +1,4 @@
-import express, { Express, Request, Response  } from "express";
+import { Express } from "express";
 import ExpressConfig from "./server/express.config";
 import routeConfig from "./server/route.config";
 import middlewareConfig from "./server/middleware.config";

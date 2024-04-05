@@ -1,9 +1,8 @@
-import { pgSchema, pgTable, serial, text, timestamp } from "drizzle-orm/pg-core";
+import { pgTable, serial, text, timestamp } from "drizzle-orm/pg-core";
 
-export const publicSchema = pgSchema("public");
 
-export const users = publicSchema.table('users', {
-    id: serial('id').primaryKey(),
+export const users = pgTable('users', {
+    id: serial('ids').primaryKey(),
     name: text('name'),
     email: text('email').unique(),
     password: text('password'),
